@@ -29,7 +29,7 @@ class NoisyDQN(nn.Module):
 
         conv_out_size = self._get_conv_out(input_shape)
         self.noisy_layers = [
-            dqn_model.NoisyLinear(conv_out_size, 512),
+            dqn_model.NoisyLinear(conv_out_size, 512, bias = False),
             dqn_model.NoisyLinear(512, n_actions)
         ]
         self.fc = nn.Sequential(

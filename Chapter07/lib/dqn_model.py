@@ -19,7 +19,8 @@ class NoisyLinear(nn.Linear):
     def reset_parameters(self):
         std = math.sqrt(3 / self.in_features)
         self.weight.data.uniform_(-std, std)
-        self.bias.data.uniform_(-std, std)
+        if self.bias is not None:
+            self.bias.data.uniform_(-std, std)
 
     def forward(self, input):
         self.epsilon_weight.normal_()
