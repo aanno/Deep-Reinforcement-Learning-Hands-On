@@ -1,4 +1,3 @@
-.idea
 runs
 venv
 records
@@ -11,4 +10,12 @@ __pycache__
 *.pyc
 roboschool-files
 
-!.idea
+# .idea
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/misc.xml
+.idea/sbt.xml
+
+Chapter06/**/*.mp4
+Chapter06/**/*.json
+
